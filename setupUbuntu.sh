@@ -15,7 +15,7 @@ echo "Adding sddm to systemctl"
 systemctl enable sddm.service
 
 mkdir -p /tmp/host_files
-share /tmp/host_files 9p trans=virtio,rw,nofail 0 0
+# echo "share /tmp/host_files 9p trans=virtio,rw,nofail 0 0" >> /etc/fstab
 
 echo "Rebooting in 10 seconds"
 sleep 10
