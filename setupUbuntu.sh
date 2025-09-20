@@ -1,8 +1,8 @@
 echo "Installing terminal emulator, app launcher, file explorer, and firefox"
 sudo apt install konsole dolphin firefox
 
-echo "Installing fastfetch git, and base-devel"
-sudo apt install fastfetch git base-devel
+echo "Installing fastfetch git"
+sudo apt install fastfetch git
 
 echo "Installing flatpak"
 sudo apt install flatpak
