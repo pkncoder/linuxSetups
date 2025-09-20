@@ -22,7 +22,7 @@ cd ../
 sudo rm -rf ./yay
 
 echo "Installing plasma and sddm"
-pacman -S sddm plasma-desktop plasma-meta
+sudo pacman -S sddm plasma-desktop plasma-meta
 
 echo "Adding sddm to systemctl"
 systemctl enable sddm.service
