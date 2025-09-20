@@ -18,6 +18,8 @@ echo "Installing yay, must be in user"
 git clone "https://aur.archlinux.org/yay.git"
 cd yay
 makepkg -si
+cd ../
+sudo rm -rf ./yay
 
 echo "Installing plasma and sddm"
 pacman -S sddm plasma-desktop plasma-meta
