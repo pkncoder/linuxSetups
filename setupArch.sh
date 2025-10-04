@@ -1,8 +1,8 @@
-echo "Installing terminal emulator, app launcher, file explorer, firefox, image viewer, and decompresser"
-sudo pacman -Syu foot wofi nautilus firefox mirage ark
+echo "Installing terminal emulator, app launcher, file explorer, firefox, decompresser, and window manager"
+sudo pacman -Syu foot wofi nautilus firefox ark nwg-displays
 
 echo "Installing fastfetch git, and base-devel"
-sudo pacman -S fastfetch base-devel stow
+sudo pacman -S fastfetch base-devel
 
 echo "Installing flatpak"
 sudo pacman -S flatpak
@@ -15,25 +15,17 @@ makepkg -si
 cd ../
 sudo rm -rf ./yay
 
-echo "Installing sddm and waybar"
-sudo pacman -S sddm waybar
+echo "Installing sddm, image viewer, starship, and waybar"
+sudo pacman -S sddm mirage waybar starship
 
 echo "Installing hyprland, hyprland utils."
-sudo pacman -S hyprland hyprlock hyprpaper
+sudo pacman -S hyprland hyprlock hyprpaper hypridle
 sudo pacman -S otf-font-awesome ttf-cascadia-code-nerd
 
 echo "Cloning dotfiles"
-git clone "https://github.com/typecraft-dev/dotfiles"
-cd dotfiles
-mkdir -p ~/.config/hypr
-
-echo "Stowing dotfiles"
-stow hyprlock/
-stow wofi/
-stow hyprpaper/
-stow waybar/
-stow backgrounds/
-stow hyprmocha/
+git clone "https://github.com/pkncoder/dotfiles.git"
+mkdir -p ./.config/
+mv dotfiles/* .config/
 
 echo "Adding sddm to systemctl"
 sudo systemctl enable sddm.service
