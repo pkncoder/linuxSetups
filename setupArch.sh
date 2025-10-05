@@ -29,7 +29,8 @@ echo "Cloning and adding dotfiles"
 git clone "https://github.com/pkncoder/dotfiles.git"
 mkdir -p ./.config/
 mv dotfiles/* .config/
-echo 'eval "$(starship init bash)"' >./.bashrc
+echo 'alias la="ls -la"' >>./.bashrc
+echo 'eval "$(starship init bash)"' >>./.bashrc
 
 echo "Installing lazyvim heath requirements."
 sudo pacman -S lua51 luarocks lazygit wget tectonic python-pip python-neovim npm
