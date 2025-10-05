@@ -1,8 +1,8 @@
-echo "Installing terminal emulator, app launcher, file explorer, firefox, decompresser, and window manager"
-sudo pacman -Syu foot wofi nautilus firefox ark nwg-displays
+echo "Installing terminal emulator, app launcher, file explorer, firefox, decompresser, gtk-theme manager, and window manager"
+sudo pacman -Syu foot wofi nautilus firefox ark nwg-look nwg-displays
 
-echo "Installing fastfetch git, and base-devel"
-sudo pacman -S fastfetch base-devel
+echo "Installing fastfetch, bhop (system view), and base-devel"
+sudo pacman -S fastfetch bhop base-devel
 
 echo "Installing flatpak"
 sudo pacman -S flatpak
