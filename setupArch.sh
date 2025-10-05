@@ -15,17 +15,25 @@ makepkg -si
 cd ../
 sudo rm -rf ./yay
 
-echo "Installing sddm, image viewer, starship, and waybar"
-sudo pacman -S sddm mirage waybar starship
+echo "Installing sddm, starship, and waybar"
+sudo pacman -S sddm waybar starship
+
+echo "Installing image viewer."
+yay -S mirage
 
 echo "Installing hyprland, hyprland utils."
 sudo pacman -S hyprland hyprlock hyprpaper hypridle
 sudo pacman -S otf-font-awesome ttf-cascadia-code-nerd
 
-echo "Cloning dotfiles"
+echo "Cloning and adding dotfiles"
 git clone "https://github.com/pkncoder/dotfiles.git"
 mkdir -p ./.config/
 mv dotfiles/* .config/
+echo 'eval "$(starship init bash)"' >./.bashrc
+
+echo "Installing lazyvim heath requirements."
+sudo pacman -S lua51 luarocks lazygit wget tectonic python-pip python-neovim npm
+sudo npm install -g neovim
 
 echo "Adding sddm to systemctl"
 sudo systemctl enable sddm.service
