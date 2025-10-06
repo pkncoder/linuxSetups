@@ -2,7 +2,7 @@ echo "Installing terminal emulator, app launcher, file explorer, firefox, decomp
 sudo pacman -Syu foot wofi nautilus firefox ark nwg-look nwg-displays
 
 echo "Installing fastfetch, bhop (system view), base-devel, and pulseaudio"
-sudo pacman -S fastfetch bhop pulseaudio
+sudo pacman -S fastfetch btop pulseaudio
 sudo pacman -S --needed base-devel
 
 echo "Installing flatpak"
