@@ -40,8 +40,8 @@ sudo npm install -g neovim
 echo "Adding sddm to systemctl"
 sudo systemctl enable sddm.service
 
-# mkdir /tmp/host_files
-# echo "share /tmp/host_files 9p trans=virtio,rw,nofail 0 0" >> /etc/fstab
+# sudo mkdir /tmp/host_files
+# sudo echo "share /tmp/host_files 9p trans=virtio,rw,nofail 0 0" >> /etc/fstab
 
 echo "Rebooting in 10 seconds"
 sleep 10
