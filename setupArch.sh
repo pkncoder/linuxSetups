@@ -1,5 +1,5 @@
 echo "Installing terminal emulator, app launcher, file explorer, firefox, decompresser, gtk-theme manager, and window manager"
-sudo pacman -Syu foot rofi nautilus firefox ark nwg-look nwg-displays
+sudo pacman -Syu foot nautilus firefox ark nwg-look nwg-displays
 
 echo "Installing fastfetch, bhop (system view), base-devel, and pulseaudio"
 sudo pacman -S fastfetch btop pulseaudio
