@@ -1,5 +1,5 @@
 echo "Installing terminal emulator, app launcher, file explorer, firefox, decompresser, gtk-theme manager, and window manager"
-sudo pacman -Syu foot wofi nautilus firefox ark nwg-look nwg-displays
+sudo pacman -Syu foot rofi nautilus firefox ark nwg-look nwg-displays
 
 echo "Installing fastfetch, bhop (system view), base-devel, and pulseaudio"
 sudo pacman -S fastfetch btop pulseaudio
@@ -23,8 +23,8 @@ echo "Installing image viewer."
 yay -S mirage
 
 echo "Installing hyprland, hyprland utils."
-sudo pacman -S hyprland hyprlock hyprpaper hypridle
-sudo pacman -S otf-font-awesome ttf-cascadia-code-nerd
+sudo pacman -S hyprland hyprlock hyprpaper hypridle hyprshot
+sudo pacman -S otf-font-awesome ttf-cascadia-code-nerd ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols
 
 echo "Cloning and adding dotfiles"
 git clone "https://github.com/pkncoder/dotfiles.git"
@@ -40,8 +40,8 @@ sudo npm install -g neovim
 echo "Adding sddm to systemctl"
 sudo systemctl enable sddm.service
 
-# sudo mkdir /tmp/host_files
-# sudo echo "share /tmp/host_files 9p trans=virtio,rw,nofail 0 0" >> /etc/fstab
+sudo mkdir /tmp/host_files
+sudo echo "share /tmp/host_files 9p trans=virtio,rw,nofail 0 0" >>/etc/fstab
 
 echo "Rebooting in 10 seconds"
 sleep 10
